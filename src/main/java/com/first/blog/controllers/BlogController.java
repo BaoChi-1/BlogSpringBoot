@@ -32,6 +32,6 @@ public class BlogController {
     public String blogPostAdd(@RequestParam String title, @RequestParam String anons, @RequestParam String full_text, Model model) {
         Post post = new Post(title, anons, full_text);
         postRepository.save(post);
-        return "redirect :/blog";
+        return "redirect:/blog";
     }
 }
