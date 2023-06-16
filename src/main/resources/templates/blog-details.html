@@ -14,8 +14,11 @@
             <h3 th:text="${el.title}"></h3>
             <p th:text="${el.full_text}"></p>
             <p><b>Просмотры: </b><span th:text="${el.views}"/></p>
-            <a th:href="'/blog/' + ${el.id} + '/edit'" calss="btn btn-warning">Редактировать</a>
-            <a th:href="'/blog/' + ${el.id} + '/remove'" calss="btn btn-warning">Удалить</a>
+            <a th:href="'/blog/' + ${el.id} + '/edit'" class="btn btn-warning">Редактировать</a><br>
+            <form th:action="'/blog/' + ${el.id} + '/remove'" method="post">
+                <button th:href="'/blog/' + ${el.id} + '/remove'" class="btn btn-warning mt-3" type="submit">Удалить</button>
+            </form>
+
         </div>
     </div>
 
